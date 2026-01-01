@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thomas' Fahrrad-Challenge</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="theme-color" content="#121212">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Fahrrad-Tracker">
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Dashboard View -->
+        <section id="view-dashboard" class="view active">
+            <header>
+                <h1 id="greeting">Hallo Thomas 👋</h1>
+                <p>Bist du bereit für deine heutige Runde?</p>
+            </header>
+
+            <div class="main-card">
+                <div class="timer-display" id="timer-display">15:00</div>
+                <div class="timer-controls">
+                    <button id="btn-start" class="btn btn-primary">Starten 🚴‍♂️</button>
+                    <button id="btn-cancel" class="btn btn-secondary hidden">Abbrechen</button>
+                </div>
+            </div>
+
+            <div id="quest-container" class="quest-card hidden">
+                <h3>Extra-Quest des Tages</h3>
+                <p id="quest-text">Fahre 5 Minuten extra!</p>
+                <div class="quest-actions">
+                    <button id="btn-accept-quest" class="btn btn-outline">Annehmen (+<span id="quest-minutes">5</span>
+                        Min)</button>
+                    <span id="quest-status" class="hidden">Angenommen ✅</span>
+                </div>
+            </div>
+
+            <nav class="bottom-nav">
+                <button class="nav-btn active" data-target="view-dashboard">Challenge</button>
+                <button class="nav-btn" data-target="view-stats">Fortschritt</button>
+            </nav>
+        </section>
+
+        <!-- Stats View -->
+        <section id="view-stats" class="view">
+            <header>
+                <h1>Dein Fortschritt 🔥</h1>
+            </header>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value" id="streak-value">0</span>
+                    <span class="stat-label">Tage Streak</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="total-quests-value">0</span>
+                    <span class="stat-label">Extra-Quests</span>
+                </div>
+            </div>
+
+            <div class="quote-card">
+                <p id="daily-quote">"Der Weg ist das Ziel."</p>
+            </div>
+
+            <nav class="bottom-nav">
+                <button class="nav-btn" data-target="view-dashboard">Challenge</button>
+                <button class="nav-btn active" data-target="view-stats">Fortschritt</button>
+            </nav>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

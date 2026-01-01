@@ -1,0 +1,15 @@
+{
+  "name": "Thomas' Fahrrad-Challenge",
+  "short_name": "Fahrrad-Tracker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#00E5FF",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
